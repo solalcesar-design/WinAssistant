@@ -24,7 +24,7 @@
         }
 
         header {
-            padding: 2rem 10%;
+            padding: 1.5rem 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -38,10 +38,9 @@
         }
 
         .brand img {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            box-shadow: 0 0 15px var(--primary-glow);
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
         }
 
         .hero {
@@ -66,125 +65,102 @@
         .subtitle {
             font-size: 1.2rem;
             color: #8b949e;
-            max-width: 600px;
+            max-width: 650px;
             margin: 20px 0 40px;
         }
 
-        /* LE BOUTON DE TÉLÉCHARGEMENT */
         .download-box {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
 
         .btn-download {
             background: linear-gradient(45deg, #007cf0, #00dfd8);
             color: white;
-            padding: 18px 45px;
+            padding: 20px 50px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
         }
 
         .btn-download:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 210, 255, 0.6);
+            box-shadow: 0 8px 25px rgba(0, 210, 255, 0.5);
         }
 
-        .file-info {
+        .warning-text {
+            color: #ffa600;
             font-size: 0.85rem;
-            color: #6e7681;
+            max-width: 400px;
+            line-height: 1.4;
         }
 
-        /* SECTION CONTACT */
         .contact-section {
-            padding: 80px 10%;
+            padding: 60px 10%;
             background: #0d1117;
             text-align: center;
-        }
-
-        .contact-grid {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .contact-card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 12px;
-            width: 280px;
-            border: 1px solid #30363d;
-        }
-
-        footer {
-            padding: 40px;
-            text-align: center;
             border-top: 1px solid #30363d;
-            font-size: 0.9rem;
-            color: #8b949e;
         }
 
-        nav a {
-            color: #8b949e;
+        .contact-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-glow);
             text-decoration: none;
-            margin-left: 20px;
+            font-size: 1.2rem;
+            border-bottom: 1px solid transparent;
             transition: 0.3s;
         }
 
-        nav a:hover { color: var(--primary-glow); }
+        .contact-link:hover {
+            border-bottom-color: var(--primary-glow);
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6e7681;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="brand">
-            <img src="logo.ico" alt="WinAssistant Logo">
-            <span style="font-size: 1.6rem; font-weight: 800; letter-spacing: -1px;">WinAssistant</span>
+            <img src="logo.ico" alt="Logo">
+            <span style="font-size: 1.5rem; font-weight: 800;">WinAssistant</span>
         </div>
-        <nav>
-            <a href="#download">Download</a>
-            <a href="#contact">Contact</a>
-        </nav>
     </header>
 
-    <main class="hero" id="download">
-        <h1>L'IA qui comprend Windows.</h1>
-        <p class="subtitle">Téléchargez l'assistant local le plus puissant pour votre système. Confidentialité totale, performance maximale.</p>
+    <main class="hero">
+        <h1>L'IA native pour votre PC.</h1>
+        <p class="subtitle">Découvrez la puissance de WinAssistant. Un assistant virtuel complet conçu par S & C Software pour transformer votre expérience Windows.</p>
         
         <div class="download-box">
-            <a href="https://drive.google.com/file/d/18PWPlF03fvvkGL1cqaKfs1JoQJBlvCG9/view?usp=sharing" class="btn-download">
-                Télécharger pour Windows
+            <a href="https://drive.google.com/uc?export=download&id=VOTRE_ID_GOOGLE_DRIVE" class="btn-download" target="_blank">
+                Télécharger WinAssistant (.exe)
             </a>
-            <span class="file-info">Version 1.0.4 • .exe (1.6 Go) • Gratuit</span>
+            <div class="warning-text">
+                Note : Le fichier fait 1.6 Go. Google Drive affichera un message indiquant qu'il ne peut pas analyser le fichier. Cliquez sur <strong>"Télécharger quand même"</strong>.
+            </div>
         </div>
     </main>
 
-    <section class="contact-section" id="contact">
-        <h2>Support & Contact</h2>
-        <div class="contact-grid">
-            <div class="contact-card">
-                <h3>S & C Software</h3>
-                <p>Développement & Innovation</p>
-                <p style="color: var(--primary-glow)">solalcesar@gmail.com</p>
-            </div>
-            <div class="contact-card">
-                <h3>Support Technique</h3>
-                <p>Besoin d'aide pour l'installation ?</p>
-                <p>Contact à : solalcesar@gmail.com</p>
-            </div>
-        </div>
+    <section class="contact-section">
+        <h2>Contact & Support</h2>
+        <p>Une question ou un retour ? Contactez-nous directement :</p>
+        <a href="mailto:solalcesar@gmail.com" class="contact-link">solalcesar@gmail.com</a>
+        <p style="margin-top: 20px; color: #8b949e;">Par S & C Software</p>
     </section>
 
     <footer>
-        <p>&copy; 2026 S & C Software. Tous droits réservés.</p>
-        <p>GitHub Pages Hosting • WinAssistant AI Project</p>
+        <p>&copy; 2026 S & C Software. Hébergé via GitHub Pages.</p>
     </footer>
 
 </body>
